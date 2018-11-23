@@ -12,21 +12,29 @@ public class Task{
 
     /* Your code here */
 
-    public NewTask(String reminder){
+    public Task() {
+        this.msg_reminder= "";
+        this.notes= "";
+        this.do_date = new Date();
+        this.pattern = "";
+        this.simpleDateFormat = new SimpleDateFormat();
+     }
+
+    public Task(String reminder){
         this.msg_reminder = reminder;
         this.do_date = new Date();
         this.priority = 0;
         this.notes = "";
     }
 
-    public NewTask(String reminder, Date date, int prio){
+    public Task(String reminder, Date date, int prio){
         this.msg_reminder = reminder;
         this.do_date = date;
         this.priority = prio;
         this.notes = "";
     }
 
-    public NewTask(String reminder, Date date, int prio, String note){
+    public Task(String reminder, Date date, int prio, String note){
         this.msg_reminder = reminder;
         this.do_date = date;
         this.priority = prio;
@@ -55,6 +63,11 @@ public class Task{
 
     public String toString(){
         return "Task: " + this.msg_reminder + " Priority: " + this.priority + " Do Date: " + this.do_date;
+    }
+
+    public static void main(String[] args){
+        Task obj = new Task("tareas para el jueves");
+        System.out.println("name of obj = " + obj.msg_reminder);
     }
 
 }

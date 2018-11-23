@@ -9,6 +9,11 @@ public class TaskList{
     private LinkedList<Task> tasks = new LinkedList<Task>();
 
     /* Your code here */
+    public TaskList() {
+        this.name = "";
+        this.tasks = new LinkedList<Task>();
+    }
+
     public TaskList(String name, LinkedList<Task> tasks){
         this.name = name;
         this.tasks = tasks;
@@ -32,8 +37,8 @@ public class TaskList{
     }
 
     public static void main(String[] args){
-        ConstMain obj = new TaskList("tareas");
-        system.out.println("name of obj = " + obj.name);
+        TaskList obj = new TaskList("tareas");
+        System.out.println("name of obj = " + obj.name);
     }
 
 }
